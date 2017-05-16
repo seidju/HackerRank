@@ -5,3 +5,4 @@ This is my attempt to score at some challenges at [HackerRank](https://www.hacke
 ##  DataStructures
 
  - [x] [2DArray - Hourglass](https://www.hackerrank.com/challenges/2d-array)
+ - [x] [Dynamic Array](https://www.hackerrank.com/challenges/dynamic-array)
