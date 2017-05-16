@@ -2,8 +2,8 @@
 
 import UIKit
 
-//MARK: - Data Structures
-
+//MARK: ************************************ Data Structures************************************************
+//MARK: ******************************************Arrays****************************************************
 
 //MARK: - 2D Array
 //https://www.hackerrank.com/challenges/2d-array
@@ -44,4 +44,11 @@ for query in queries {
     }
 }
 
+//MARK: - Left Rotation
+//https://www.hackerrank.com/challenges/array-left-rotation
+
+let inputArray = [1,2,3,4,5]
+let rotations:Int = 5
+let rotated = Array(inputArray[rotations ..< inputArray.count] + inputArray[0 ..< rotations])
+print(rotated.map{"\($0) "}.reduce("",+)) // to string
 
