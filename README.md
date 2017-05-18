@@ -14,3 +14,9 @@ This is my attempt to score at some challenges at [HackerRank](https://www.hacke
  
  - [x] [Height of a BTree](https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree)
  
+
+
+## Algorithms
+  ### Sorting
+- [x] Bubble sort
+- [x] [Quicksort](https://www.hackerrank.com/challenges/quicksort1)
