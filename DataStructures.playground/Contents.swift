@@ -46,7 +46,7 @@ for query in queries {
 
 //MARK: - Left Rotation
 //https://www.hackerrank.com/challenges/array-left-rotation
-
+"".com
 let inputArray = [1,2,3,4,5]
 let rotations:Int = 5
 let rotated = Array(inputArray[rotations ..< inputArray.count] + inputArray[0 ..< rotations])
