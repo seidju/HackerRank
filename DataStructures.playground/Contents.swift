@@ -124,6 +124,41 @@ for i in 0..<listSize {
 print(max)
 
 
+//MARK: ******************************************Trees****************************************************
+//Height of a binary tree
+//https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree
+
+class Node {
+    var data: Int
+    var left: Node?
+    var right: Node?
+    init(d: Int) {
+        self.data = d
+    }
+}
+class Tree {
+    func insert(root: Node?, data: Int) -> Node? {
+        if root == nil {
+            return Node(d: data)
+        }
+        if data <= (root?.data)! {
+            root?.left = self.insert(root: root?.left,data: data)
+        } else {
+            root?.right = self.insert(root: root?.right,data: data)
+        }
+        return root
+    }
+    
+    func getHeight(root: Node?) -> Int {
+        guard root != nil else { return -1 } //because we adding +1 at the end, then we need to cancel out the +1
+        let leftHeight = self.getHeight(root: root?.left)
+        let rightHeight = self.getHeight(root: root?.right)
+        return leftHeight > rightHeight ? leftHeight+1 : rightHeight+1
+    }
+}
+
+
+
 
 
 
