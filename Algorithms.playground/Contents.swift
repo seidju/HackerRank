@@ -31,10 +31,10 @@ let array = [5,11,7,9,1]
 let sorted = bubbleSort(array: array)
 
 
-//Quicksort 
+//Quicksort
 
 func quicksort(array: inout [Int])  {
-    quicksort(array: &unsorted, left: 0, right: unsorted.count-1)
+    quicksort(array: &array, left: 0, right: array.count-1)
 }
 
 func quicksort(array: inout [Int], left: Int, right: Int) {
@@ -72,3 +72,46 @@ func partition(array: inout [Int], left: Int, right: Int, pivot: Int) -> Int{
 var unsorted = [9, 2, 6, 4, 3, 5, 1]
 quicksort(array: &unsorted)
 print(unsorted)
+
+
+//Recursion
+//Fibonacci
+func fib(n: Int) -> Int {
+    if n <= 0 {
+        return 0
+    } else if n == 1 {
+        return 1
+    } else {
+        return fib(n: n-1) + fib(n: n-2)
+    }
+}
+print(fib(n: 4))
+
+//Davis' Staircase
+//
+
+//slow
+func calcNumberOfWays(height: Int) -> Int {
+    if height == 1 { return 1 }
+    else if height == 2 {return 2}
+    else if height == 3 {return 4}
+    else { return calcNumberOfWays(height: height - 1) + calcNumberOfWays(height: height-2) + calcNumberOfWays(height: height-3) }
+}
+print(calcNumberOfWays(height: 7))
+//faster O(n)
+func climbPattern(nHeight: Int) -> Int {
+    if nHeight == 1 { return 1 }
+    else if nHeight == 2 {return 2}
+    else if nHeight == 3 {return 4}
+    var array = [Int]()
+    array.insert(1, at: 0)
+    array.insert(2, at: 1)
+    array.insert(4, at: 2)
+    for i in 3..<nHeight {
+        array.insert(array[i-1]+array[i-2]+array[i-3], at: i)
+    }
+    return array[array.count-1]
+    
+}
+
+
