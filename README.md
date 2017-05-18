@@ -20,3 +20,7 @@ This is my attempt to score at some challenges at [HackerRank](https://www.hacke
   ### Sorting
 - [x] Bubble sort
 - [x] [Quicksort](https://www.hackerrank.com/challenges/quicksort1)
+
+  ### Recursion
+- [x] Fibonacci sequence
+- [x] Davis' staircase
